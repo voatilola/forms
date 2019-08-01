@@ -7,22 +7,23 @@
     <title>Sign Up</title>
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500,100' rel='stylesheet' type='text/css'>
     <link href="style2.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
     <div>
     <h1>Sign Up</h1>
-    <form action="" method="GET">
-        <br>First name:<br> <input type="text" name="Name"><br>
-        <br>Last name:<br> <input type="text" name="Name"><br>
-        <br>Age:<br> <input type="number" min=0 name="Age"><br>
+    <form action="" method="POST">
+        <br>First name:<br> <input type="text" id="fname" name="Name"required><br>
+        <br>Last name:<br> <input type="text" id="lname" name="Name"required><br>
+        <br>Age:<br> <input type="number" min=0 id="age" name="Age"required><br>
         <br>Gender:<br>
-                <input type="radio" name="Gender" value="Male">Male<br>
-                <input type="radio" name="Gender" value="Female">Female<br>
-                <input type="radio" name="Gender" value="Others">Others<br>
-        <br>Email:<br> <input type="email" name="Email"><br>
-        <br>Password:<br> <input type="password" name="Password"><br>
-        <br>Confirm password:<br> <input type="password" name="password"><br>
-        <br>Secret Question:<br> <select name="Choose Favourite Fruits"><br>
+                <input type="radio" name="Gender" value="Male"required>Male
+                <input type="radio" name="Gender" value="Female"required>Female
+                <input type="radio" name="Gender" value="Others"required>Others<br>
+        <br>Email:<br> <input type="email" id="email" name="Email"required><br>
+        <br>Password:<br> <input type="password" id="pwd1" name="Password"required><br>
+        <br>Confirm password:<br> <input type="password" id="pwd2" name="password"required><br>
+        <br>Secret Question:<br> <select name="Choose Favourite Fruits" id="age_group" required><br>
                 <option value="Favourite fruits">Choose favourite fruits</option>
                 <option value="Apple">Apple </option>
                 <option value="Banana">Banana</option>
@@ -34,8 +35,8 @@
                 <option value="Orange">Orange</option>
                 <option value="Pineapple">Pineapple</option>
             </select><br>
-        <input type="Checkbox" name="Terms">Agree toTerms and condition.<br>
-        <button>Submit</button>
+        <input type="Checkbox" id="terms" name="Terms">Agree to terms and condition.<br>
+        <button onclick="validateSignUp()"> Submit</button>
         <br><button><a href=index.html>Sign Up</a></button>
         <button><a href=signin.html>Sign In</a></button><br>
     </form>
